@@ -41,7 +41,7 @@ public class RadarUsageMain {
  	
  	}
 	public static void main(String[] args) {
-		System.out.println("start RADAR");
+		System.out.println("start RADAR ");
 		new RadarUsageMain().doJob();
 	}
 }

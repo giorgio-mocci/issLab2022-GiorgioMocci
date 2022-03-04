@@ -5,14 +5,22 @@
 # The pin 25 is physical 22 and Wpi 6.
 #	sudo bash led25GpioTurnOn.sh
 # -------------------------------------------------------------
-gpio mode 6 out #
+#!/bin/bash
+#i=0
+#tempo=50
+#limit=$1
+#num=$((limit/tempo))
 
-for i in {1..3}
+echo $$ > PidOfBlinkingLed.txt
+
+
+while : #[ $i -le $num ]
 do
-gpio write 6 1 #
-sleep 0.02
-gpio write 6 0 #
-sleep 0.02
+	gpio mode 6 out #
+	gpio write 6 1 #
+	sleep 0.05
+	gpio mode 6 out
+	gpio write 6 0
+	#i=$((i+1))
 done
-
 
