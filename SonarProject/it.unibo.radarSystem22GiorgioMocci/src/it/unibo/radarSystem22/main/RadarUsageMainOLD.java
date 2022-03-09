@@ -20,7 +20,7 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 
 
-public class RadarUsageMain implements MqttCallback {
+public class RadarUsageMainOLD implements MqttCallback {
  	
 	/** The broker url. */
 	private static final String brokerUrl ="tcp://192.168.1.12:1883";
@@ -113,6 +113,6 @@ public class RadarUsageMain implements MqttCallback {
 		radarSupport.setUpRadarGui();
 	//	new RadarUsageMain().doJob();
 		String publisherId = UUID.randomUUID().toString();
-		new RadarUsageMain().subscribe(topic);		
+		new RadarUsageMainOLD().subscribe(topic);		
 	}
 }

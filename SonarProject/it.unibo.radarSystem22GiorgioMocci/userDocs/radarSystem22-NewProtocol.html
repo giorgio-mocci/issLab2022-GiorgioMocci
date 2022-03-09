@@ -230,11 +230,15 @@ Si desidera costruire un'applicazione software capace di:
 <h2>Test plans</h2>
 
 
+
+
 <h2>Project</h2>
   <h5>1)collegato hardware necessario (sonar e led)</h5>
-  <h5>2)modifica a file SonarAlone.c e RadarUsageMain.java, implementando socket TCP cliente/servitore</h5>
-  <h5>3)modifica file SonarAlone.c per implementare accensione/spegnimento led, usando i file .sh forniti</h5>
-  <h5>4)modifica finale a file SonarAlone.c per implementare il blink del led quando la distanza rilevato è entro una certa soglia</h5>
+  <h5>2)Disaccoppio il software, andando a creare un file per ogni responsabilità del mio sistema: Sonar,Led,Controller,Radar</h5>
+    <h5>2.1) Implemento la comunicazione tra il software utilizzando il protocollo TCP e le socket:<a href="../../Raspberry_software/NewProject\TCP\ControllerTCP.py"> ControllerTCP.py </a>  <a href="../../Raspberry_software/NewProject\TCP\ledTCP.py"> ledTCP.py </a>    <a href="../../Raspberry_software/NewProject\TCP\ControllerTCP.py"> sonarTCP.py </a> </h5>
+    <h5>2.2) Implemento la comunicazione tra il software utilizzando il protocollo MQTT e un broker Mosquitto:<a href="../../Raspberry_software/NewProject\MQTT\ControllerMQTT.py">ControllerMQTT.py </a>  <a href="../../Raspberry_software/NewProject\MQTT\ledMQTT.py"> ledMQTT.py </a>    <a href="../../Raspberry_software/NewProject\MQTT\sonarMQTT.py"> sonarMQTT.py </a> </h5>
+    <h5>2.3) TODO: Implemento la comunicazione tra il software utilizzando il protocollo CoAP </h5>
+  <h5>3)modifica a file java per l'utilizzo del sonar, in modo da renderli compatibili con i nuovi protocolli utilizzati: <a href="../\src\it\unibo\radarSystem22\main\RadarUsageMainTCP.java"> RadarUsageMainTCP.java</a>  <a href="../\src\it\unibo\radarSystem22\main\RadarUsageMainMQTT.java"> RadarUsageMainMQTT.java</a>  </h5>
 
 </div>
 
