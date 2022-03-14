@@ -81,5 +81,6 @@
 	<classpathentry kind="lib" path="C:/Users/gmocc/Documents/GitHub/issLab2022/unibolibs/radarPojo.jar"/>
 	<classpathentry kind="lib" path="C:/Users/gmocc/Documents/GitHub/issLab2022/unibolibs/uniboInterfaces.jar"/>
 	<classpathentry kind="lib" path="C:/Users/gmocc/Documents/GitHub/issLab2022/unibolibs/unibonoawtsupports.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gmocc/Documents/GitHub/issLab2022/unibolibs/it.unibo.comm2022-1.0.jar"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>
