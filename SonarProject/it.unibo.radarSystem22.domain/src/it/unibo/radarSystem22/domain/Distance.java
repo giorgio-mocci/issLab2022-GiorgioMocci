@@ -1,6 +1,6 @@
 package it.unibo.radarSystem22.domain;
 
-import it.unibo.radarSystem22.domain.intefaces.IDistance;
+import it.unibo.radarSystem22.domain.interfaces.IDistance;
 
 public class Distance implements IDistance{
  private int v;
