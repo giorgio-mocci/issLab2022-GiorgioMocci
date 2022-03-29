@@ -60,6 +60,8 @@ public class RadarSysSprint3DevicesOnRaspMain implements IApplication{
 	}
 	protected void configure() {		
 	   ProtocolType protocol = RadarSystemConfig.protcolType;
+	   protocol       = ProtocolType.udp;		
+	   System.out.println("STO USANDO IL PROTOCOLLO "+ protocol.toString());
 	   led                   = DeviceFactory.createLed();
  	   IApplMsgHandler ledh  = LedApplHandler.create("ledh", led);
 	   sonar      = DeviceFactory.createSonar();
