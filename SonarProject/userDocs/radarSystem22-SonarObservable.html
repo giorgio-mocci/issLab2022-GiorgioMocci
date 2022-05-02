@@ -227,45 +227,44 @@ Si desidera estendere l'applicazione con una versione del dispositivo sonar capa
 
 <h2>Requirement analysis</h2>
   <div class="remark">
-    <li>Il SonarObservable deve poter inviare informazioni (la distanza misurata) a compontenti software interessate, che chiameremo Observer. </li><br>
-    <li>Gli Observer possono risiedere sullo stesso nodo del SonarObservable, o su un nodo remoto.</li><br>
-    <li>Il SonarObservable deve inviare il valore della distanza misurata solo quando quest'ultimo si è modificato in modo significativo.</li><br>
-    <li>La versione osservabile (SonarObservable) deve utilizzare il dispositivo Sonar introdotto e definito precedentemente.</li><br>
 
+    Domande al committente: <br>
+    <li>cosa significa osservare un dispositivo? Significa osservare i valori prodotti o il suo stato interno (carica delle batterie,
+       temperatura interna, rate di generazione dei dati, etc.)?<br><br>
+       In questo caso, vogliamo andare a osservare la misura prodotta dal sonar. Quindi NON si vuole andare a osservare il suo stato interno, ma
+       i dati che questo va a generare. </li><br>
+    <li>se siamo convinti che si debbano osservare i valori prodotti pittosto che il dispositivo in sè, come formalizzare questo approccio
+        nel caso del SonarObservable?.<br><br>
+        Mediante l'utilizzo di un entità observable "DistanceMeasured", che il sonar andrà ad aggiornare, e che verrà osservata dagli observer.</li><br>
+
+    <li>Cosa intende il committente con "si modificano in modo significativo"?<br><br>
+        Con valore significativo si intende una differenza dal valore precedente in valore assoluto di almeno 1 centimetro.</li>
 </div>
 
 <h2>Problem analysis</h2>
   <div class="remark">
+    Abbiamo la necessità di un entità osservabile "DistanceMeasured" che ha come stato la distanza misurata dal sonar.
     La transizione ad un Sonar osservabile prospettata in Il pattern observer può essere affrontata pensando il SonarObservable in due modi:<br><br>
-    <li>Modo 1):L'entità SonarObservable è direttamente interessata alla registrazione dei componenti observer, ne accetta la registrazione e tiene
+
+    <li>Modo 1):L'entità DistanceMeasured è direttamente interessata alla registrazione dei componenti observer, ne accetta la registrazione e tiene
         aggiornata una lista contenente le istanze degli observer. Sarà inoltre la suddetta entità a occuparsi dell'invio della misurazione effettuata
-        tramite l'invocazione di un metodo apposito, chiamato "update".</li><br>
+        tramite l'invocazione di un metodo apposito, chiamato "update" solo nel caso che quest'ultima rispetti il vincolo del "cambiamento significativo".</li><br>
 
   <li>Modo 2):Viene introdotto un componente mediatore "Broker" configurando il tutto in modo da implementare una comunicazione mediata.In questo caso
-        gli observers si andranno a registrare presso il broker. <br>Il SonarObservable, che agisce come un generatore di dati andrà
-        a comunicare le proprie misurazioni al broker, che poi avrà cura di notificare tali misurazioni ai vari observers interessati che si sono precedentemente
+        gli observers si andranno a registrare presso il broker. <br>L'entità observable DistanceMeasured andrà a comunicare il proprio stato al broker
+        in caso di cambiamento significativo, che poi avrà cura di notificare tale stato ai vari observers interessati che si sono precedentemente
         iscritti.</li><br>
 
     Tra i due modi si preferisce implementare il secondo, in quanto permette un maggiore disaccoppiamento, andando a seguire il principio di singola responsabilità.<br>
     </div>
 
 <h2>Test plans</h2>
-  <div class="remark">
-    Il funzionamento del SonarObservable deve essere testato in modo automatizzato ponendo un ostacolo a distanza fissa DTESTING1 davanti ad esso, controllando che tutti
-     gli Observers ricevano il valore DTESTING1. Dopo un qualche tempo, si modifica la posizione dell’ostacolo a una nuova distanza DTESTING2 e si controlla che gli tutti
-      gli Observers ricevano il valore DTESTING2.
-
-    </div>
+  
 
 
 
 <h2>Project</h2>
-  <div class="remark">
-    <li>Creata un interfaccia ISonarObserver con relativa classe SonarObserver che la implementa.</li><br>
-    <li>Creato componente "mediatore" Broker che gestiste i meccanismi publish/subscribe di Sonar e SonarObserver e la loro relativa comunicazione</li><br>
-    <li>Creato un nuovo model SonarObservableModel con relative classi concrete e Mock SonarObservableConcrete e SonarObservableMock. Queste classi all'attivazione creano
-        un nuovo Broker, e a ogni cambiamento della distanza (invocazione metodo getupdate), pubblicano un nuovo valore nel broker.</li><br>
-    </div>
+
 
 </div>
 

@@ -60,8 +60,6 @@ public class RadarSysSprint3DevicesOnRaspMain implements IApplication{
 	}
 	protected void configure() {		
 	   ProtocolType protocol = RadarSystemConfig.protcolType;
-	   protocol       = ProtocolType.udp;		
-	   System.out.println("STO USANDO IL PROTOCOLLO "+ protocol.toString());
 	   led                   = DeviceFactory.createLed();
  	   IApplMsgHandler ledh  = LedApplHandler.create("ledh", led);
 	   sonar      = DeviceFactory.createSonar();
@@ -86,6 +84,6 @@ public class RadarSysSprint3DevicesOnRaspMain implements IApplication{
 
 	public static void main( String[] args) throws Exception {
 		BasicUtils.aboutThreads("At INIT with NO CONFIG files| ");
-		new RadarSysSprint3DevicesOnRaspMain().doJob("DomainSystemConfig.json","RadarSystemConfig.json");
+		new RadarSysSprint3DevicesOnRaspMain().doJob(null,null);
   	}
 }

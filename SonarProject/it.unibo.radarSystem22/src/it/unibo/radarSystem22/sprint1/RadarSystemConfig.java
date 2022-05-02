@@ -56,7 +56,6 @@ public class RadarSystemConfig {
 		        case "tcp"  : protcolType = ProtocolType.tcp; break;
 		        case "coap" : protcolType = ProtocolType.coap; break;
 		        case "mqtt" : protcolType = ProtocolType.mqtt; break;
-		        case "udp" : protcolType = ProtocolType.udp; break;
 	        }	        
 	        
 		} catch (FileNotFoundException e) {

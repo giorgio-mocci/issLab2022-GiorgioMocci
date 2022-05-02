@@ -245,6 +245,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="RadarSystemSupporti.html#proxyasclient">ProxyAsClient</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#entryport">entryPort</a></li>
 <li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#setconnection">setConnection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#sendcommandonconnection">sendCommandOnConnection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#sendrequestonconnection">sendRequestOnConnection</a></li>
@@ -292,6 +293,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Enablers.html#sprint3-review-da-pojo-a-gestori-di-messaggi">SPRINT3-review: da POJO a (gestori di) messaggi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Enablers.html#udp-oltre-il-tcp">UDP oltre il TCP</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Enablers.html#richieste-multiple">Richieste multiple</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Enablers.html#un-punto-critico">Un punto  critico</a></li>
 </ul>
@@ -300,8 +302,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ContestiContenitori.html">Contesti-contenitori</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ContestiContenitori.html#analisi-del-concetto-di-contesto">Analisi del concetto di Contesto</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#icontext">IContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#struttura-dei-messaggi-applicativi">Struttura dei messaggi applicativi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#rappresentazione-dei-messaggi">Rappresentazione dei messaggi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#iapplmessage">IApplMessage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#il-problema-delle-risposte">Il problema delle risposte</a></li>
 </ul>
 </li>
@@ -309,17 +313,23 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ContestiContenitori.html#sprint4-il-progetto-del-systemdesigner">SPRINT4: il progetto del SystemDesigner</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#la-classe-applmessage">La classe ApplMessage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#iapplmessage">IApplMessage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#la-classe-applmessage">La classe ApplMessage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#il-metodo-setfields">Il metodo setFields</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#perche-prolog">Perchè Prolog?</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#estensione-della-interfaccia-iapplmsghandler">Estensione della interfaccia <span class="xref std std-ref">IApplMsgHandler</span></a></li>
-<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#modifica-della-classe-applmsghandler">Modifica della classe <span class="xref std std-ref">ApplMsgHandler</span></a><ul>
-<li class="toctree-l5"><a class="reference internal" href="ContestiContenitori.html#preparereply">prepareReply</a></li>
-</ul>
-</li>
 <li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#estensione-della-interfaccia-iapplintepreter">Estensione della interfaccia <span class="xref std std-ref">IApplIntepreter</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#modifica-della-classe-applmsghandler">Modifica della classe <span class="xref std std-ref">ApplMsgHandler</span></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="ContestiContenitori.html#metodo-preparereply">Metodo <code class="docutils literal notranslate"><span class="pre">prepareReply</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#il-tcpcontextserver">Il TcpContextServer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#abilitatore-di-contesto">Abilitatore di contesto</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#enablercontext">EnablerContext</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#il-gestore-di-sistema-dei-messaggi">Il gestore di sistema dei messaggi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#verso-gli-attori">Verso gli attori</a></li>
 </ul>
@@ -328,25 +338,164 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ContestiContenitori.html#sprint4-il-progetto-dell-applicationdesigner">SPRINT4: il progetto dell’ ApplicationDesigner</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#refactoring-per-il-led">Refactoring per il Led</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#elaborate-di-ledapplinterpreter">elaborate di <span class="xref std std-ref">LedApplInterpreter</span></a></li>
-<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#elaborate-di-ledapplhandler">elaborate di <span class="xref std std-ref">LedApplHandler</span></a></li>
-<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#ledproxyasclient">LedProxyAsClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#rafactor-elaborate-di-ledapplinterpreter">rafactor elaborate di <span class="xref std std-ref">LedApplInterpreter</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#refactor-elaborate-di-ledapplhandler">refactor elaborate di <span class="xref std std-ref">LedApplHandler</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#ledproxy">LedProxy</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#refactoring-per-il-sonar">Refactoring per il Sonar</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#elaborate-di-sonarapplinterpreter">elaborate di <span class="xref std std-ref">SonarApplInterpreter</span></a></li>
-<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#metodo-elaborate-di-sonarapplhandler">Metodo elaborate di <span class="xref std std-ref">SonarApplHandler</span></a></li>
-<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#sonarproxyasclient">SonarProxyAsClient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#rafactor-elaborate-di-sonarapplinterpreter">rafactor elaborate di <span class="xref std std-ref">SonarApplInterpreter</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#refactor-elaborate-di-sonarapplhandler">refactor elaborate di <span class="xref std std-ref">SonarApplHandler</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ContestiContenitori.html#sonarproxy">SonarProxy</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#architettura-con-contesto">Architettura con contesto</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#deployoment-del-prototipo-con-contesto">Deployoment del prototipo con contesto</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ContestiContenitori.html#problemi-ancora-aperti">Problemi ancora aperti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ContestiContenitori.html#sprint4-esperimenti">Sprint4: esperimenti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#richieste-in-parallelo">Richieste ‘in parallelo’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ContestiContenitori.html#uso-di-un-counterwithdelay">Uso di un CounterWithDelay</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Attori.html">Attori</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SonarObservable.html">Il SonarObservable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SonarObservable.html#sonarobservable-requisiti">SonarObservable: Requisiti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SonarObservable.html#sonarobservable-analisi-dei-requisiti">SonarObservable: analisi dei requisiti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SonarObservable.html#sonarobservable-analisi-del-problema">SonarObservable: analisi del problema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="SonarObservable.html#la-distanza-misurata-come-risorsa-osservabile">La distanza misurata come risorsa osservabile</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="SonarObservable.html#idistancemeasured">IDistanceMeasured</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SonarObservable.html#iobservable">IObservable</a></li>
+<li class="toctree-l5"><a class="reference internal" href="SonarObservable.html#iobserver">IObserver</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="SonarObservable.html#sonarobservable-progetto">SonarObservable: progetto</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="SonarObservable.html#distancemeasured">DistanceMeasured</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SonarObservable.html#sonarmockforobs">SonarMockForObs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SonarObservable.html#sonarconcreteforobs">SonarConcreteForObs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SonarObservable.html#aggiornamento-di-devicefactory">Aggiornamento di DeviceFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SonarObservable.html#testing-del-sonar-osservabile">Testing del Sonar ‘osservabile’</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="SonarObservable.html#un-observer-per-il-testing">Un observer per il testing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SonarObservable.html#verso-gli-eventi">Verso gli eventi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SonarObservable.html#il-sonar-come-attore-che-emette-eventi">Il Sonar come attore che emette eventi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SonarObservable.html#parte-reattiva">Parte reattiva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SonarObservable.html#parte-proattiva">Parte proattiva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SonarObservable.html#emissione-di-eventi">Emissione di eventi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SonarObservable.html#controllerforsonaractor">ControllerForSonarActor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="SonarObservable.html#elaborazione-delle-risposte">Elaborazione delle risposte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SonarObservable.html#elaborazione-degli-eventi">Elaborazione degli eventi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="SonarObservable.html#configurazione-lato-raspberry">Configurazione lato Raspberry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SonarObservable.html#configurazione-lato-pc">Configurazione lato PC</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Attori.html">Attori</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#il-paradigma-ad-attori">Il paradigma ad Attori</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#actorqak-e-qakactor22">ActorQak e QakActor22</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#ledactor">LedActor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#qakactor22-il-costruttore">QakActor22: il costruttore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#qak22context">Qak22Context</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#qakactor22-getactor">QakActor22: getActor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#qakactor22-handlemsg">QakActor22: handleMsg</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#ledactor-handlemsg">LedActor: handleMsg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#ledactor-esecuzione-di-comandi">LedActor: esecuzione di comandi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#la-classe-appldata">La classe ApplData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#ledactor-esecuzione-di-richieste">LedActor: esecuzione di richieste</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#richieste-asincrone">Richieste asincrone</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#qakactor22-sendreply">QakActor22: sendReply</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#qakactor22-invio-di-messaggi">QakActor22: invio di messaggi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#invio-di-messaggi-da-non-attori">Invio di messaggi da non-attori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#qak22util-sendamsg">Qak22Util.sendAMsg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#usinglednocontrolleronpc">UsingLedNoControllerOnPc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#invio-di-richieste-da-programma">Invio di richieste da programma</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#invio-di-messaggi-da-attore">Invio di messaggi da attore</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#il-metodo-queuemsg">Il metodo queueMsg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#metodi-di-invio-messaggi">Metodi di invio messaggi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#automsg">autoMsg</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#usingledandcontrolleronpc">UsingLedAndControllerOnPc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#controlleractor">ControllerActor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#controlleractor-comportamento">ControllerActor: comportamento</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#dal-locale-al-distribuito">Dal locale al distribuito</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#qakcontext-setactorasremote">QakContext: setActorAsRemote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#package-unibo-actor22comm">Package unibo.actor22Comm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#contextmsghandler-per-attori">ContextMsgHandler per attori</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#gestione-di-richieste">Gestione di richieste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#actorforreply">ActorForReply</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#invio-di-messaggi-ad-attori-remoti">Invio di messaggi ad attori remoti</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#sendmsgtoremoteactor">sendMsgToRemoteActor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#proxyasclient-in-actor22comm">ProxyAsClient in actor22comm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#activatereceiver">activateReceiver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#qakactor22-replytoremotecaller">QakActor22: replyToRemoteCaller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Attori.html#sendamsg-di-qak22util">sendAMsg di Qak22Util</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Attori.html#esempi">Esempi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#configurazione-usando-annotazioni">Configurazione usando annotazioni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Attori.html#evoluzioni-del-radarsystem">Evoluzioni del RadarSystem</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Eventi.html">Eventi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Eventi.html#eventmsghandler">EventMsgHandler</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Eventi.html#qak22context-registeraseventobserver">Qak22Context.registerAsEventObserver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Eventi.html#eventmsghandler-updatetheobservers">EventMsgHandler updateTheObservers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Eventi.html#emit-di-un-evento">emit di un evento</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Annotazioni.html">Annotazioni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Annotazioni.html#meta-annotation-in-java">Meta-Annotation in Java</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Annotazioni.html#annotazioni-esempio">Annotazioni: esempio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Annotazioni.html#annotation-definizione">Annotation: definizione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Annotazioni.html#annotation-uso">Annotation: uso</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Annotazioni.html#configurare-con-annotation">Configurare con Annotation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Annotazioni.html#actorlocal-e-actorremote">&#64;ActorLocal e &#64;ActorRemote</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Annotazioni.html#esempio">Esempio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Annotazioni.html#qak22context-handlelocalactordecl">Qak22Context.handleLocalActorDecl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Annotazioni.html#qak22context-handleremoteactordecl">Qak22Context.handleRemoteActorDecl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Annotazioni.html#altre-annotazioni-di-configurazione">Altre annotazioni di configurazione</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="RaspberrySoftware.html">RaspberrySoftware</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#azioni-preliminari">Azioni Preliminari</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#se-non-abbiamo-wifi">Se non abbiamo WIFI</a></li>
@@ -413,6 +562,133 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="VirtualRobot.html">VirtualRobot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VirtualRobot.html#differential-drive-robot">Differential Drive robot</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#robot-reali">Robot reali</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VirtualRobot.html#wenv">WEnv</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#usare-wenv">Usare WEnv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#scene-per-wenv">Scene per WEnv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="VirtualRobot.html#sceneconfig-js">sceneConfig.js</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#sensori-virtuali">Sensori virtuali</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VirtualRobot.html#comandi-base-per-il-robot-in-cril">Comandi-base per il robot in cril</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#interazioni-mediante-http">Interazioni mediante HTTP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#interazioni-mediante-ws">Interazioni mediante WS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="VirtualRobot.html#messaggi-di-stato">Messaggi di stato</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#esempi-di-uso-naive-di-wenv">Esempi di uso ‘naive’ di WEnv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="VirtualRobot.html#clientnaiveusinghttp">ClientNaiveUsingHttp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="VirtualRobot.html#clientnaiveusingws">ClientNaiveUsingWs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VirtualRobot.html#naivegui">NaiveGui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VirtualRobot.html#interaction2021-per-http-e-ws">Interaction2021 per HTTP e WS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#httpconnection">HttpConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#wsconnection">WsConnection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="VirtualRobot.html#wsconnsysobserver">WsConnSysObserver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#esempi-di-uso-di-httpconnection-e-wsconnection">Esempi di uso di HttpConnection e WsConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#casi-di-interazione">Casi di interazione</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VirtualRobot.html#note-di-implementazione">Note di implementazione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#architettura-di-wenv">Architettura di WEnv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VirtualRobot.html#wenv-come-immagine-docker">WEnv come immagine docker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="VirtualRobot.html#dockerfile-e-creazione-dell-immagine">Dockerfile e creazione dell’immagine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="VirtualRobot.html#esecuzione-della-immagine">Esecuzione della immagine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="VirtualRobot.html#modificare-la-scena-nella-immagine">Modificare la scena nella immagine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="VirtualRobot.html#esecuzione-con-docker-compose">Esecuzione con docker-compose</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="VirtualRobot.html#virtualrobotonly3-0-yaml">virtualRobotOnly3.0.yaml</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Actors22.html">Actors22</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Actors22.html#uno-sguardo-alla-fase1">Uno sguardo alla Fase1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actors22.html#uno-sguardo-alla-fase2">Uno sguardo alla Fase2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actors22.html#preludio-alla-fase3">Preludio alla Fase3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actors22.html#actor22-annotated">Actor22 annotated</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#un-esempio-di-sistema-a-due-nodi">Un esempio di sistema a due nodi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Actors22.html#parte-del-sistema-su-pc">Parte del sistema su PC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Actors22.html#parte-del-sistema-su-raspberrypi">Parte del sistema su RaspberryPi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Actors22.html#configurazione-del-sistema">Configurazione del sistema</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#annotazioni-per-dichiarare-contesti">Annotazioni per dichiarare Contesti</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Actors22.html#qak22context-setcontexts22">Qak22Context.setContexts22</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#annotazioni-per-dichiarare-attori">Annotazioni per dichiarare Attori</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Actors22.html#actor22-esempi-con-wenv">Actor22: esempi con WEnv</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#actorwithobserverusingwenv">ActorWithObserverUsingWEnv</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Actors22.html#gestione-dei-messaggi-di-stato">Gestione dei messaggi di stato</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#un-primo-automa-a-stati-finiti">Un primo automa a stati finiti</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Actors22.html#nuova-gestione-dei-messaggi-di-stato">Nuova gestione dei messaggi di stato</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Actors22.html#qakactor22fsm">QakActor22Fsm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#qakactor22fsm-costruttore">QakActor22Fsm: costruttore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#addexpectedmsg">addExpectedMsg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#qakactor22fsm-handlemsg">QakActor22Fsm: handleMsg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#stateactionfun">StateActionFun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#declarethestates">declareTheStates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Actors22.html#declarestate">declareState</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#addtransition">addTransition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#statetransition">stateTransition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Actors22.html#nextstate">nextState</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Actors22.html#automa-refactored">Automa refactored</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RobotCleaner.html">RobotCleaner</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RobotCleaner.html#robotcleaner-requisiti">RobotCleaner: requisiti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RobotCleaner.html#robotcleaner-analisi-dei-requisiti">RobotCleaner: analisi dei requisiti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RobotCleaner.html#analisi-del-testo">Analisi del testo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RobotCleaner.html#requisiti-funzionali">Requisiti funzionali</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RobotCleaner.html#requisiti-non-funzionali">Requisiti non funzionali</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RobotCleaner.html#robotcleaner-analisi-del-problema">RobotCleaner: analisi del problema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RobotCleaner.html#il-cuore-del-problema">Il cuore del problema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RobotCleaner.html#strategia-di-movimento">Strategia di movimento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RobotCleaner.html#movimento-per-colonne">Movimento per colonne</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RobotCleaner.html#movimento-a-spirale">Movimento a spirale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RobotCleaner.html#movimento-a-onde">Movimento a onde</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RobotCleaner.html#il-passo-del-robot">Il passo del robot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RobotCleaner.html#il-robot-come-unita-di-misura">Il robot come unità di misura</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RobotCleaner.html#robotcleaner-interazioni">RobotCleaner: Interazioni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RobotCleaner.html#linguaggio-di-comando-da-cril-a-aril">Linguaggio di Comando: da cril a aril</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RobotCleaner.html#robotcleaner-prototipo-dopo-l-analisi">RobotCleaner: prototipo dopo l’analisi</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <section id="indices-and-tables">
@@ -460,9 +736,15 @@
 <li class="toctree-l1"><a class="reference internal" href="RadarSystemSupporti.html">Supporti per comunicazioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Enablers.html">Abilitatori di comunicazione</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ContestiContenitori.html">Contesti-contenitori</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SonarObservable.html">Il SonarObservable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Attori.html">Attori</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Eventi.html">Eventi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Annotazioni.html">Annotazioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RaspberrySoftware.html">RaspberrySoftware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RaspBasicCode.html">RaspBasicCode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VirtualRobot.html">VirtualRobot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Actors22.html">Actors22</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RobotCleaner.html">RobotCleaner</a></li>
 </ul>
 
 <div class="relations">

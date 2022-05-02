@@ -19,9 +19,16 @@ iss22
    RadarSystemSupporti
    Enablers
    ContestiContenitori
+   SonarObservable
    Attori
+   Eventi
+   Annotazioni
    RaspberrySoftware
    RaspBasicCode
+   VirtualRobot
+   Actors22
+   RobotCleaner
+
 
 Indices and tables
 -------------------

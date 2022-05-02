@@ -3,8 +3,10 @@ package it.unibo.radarSystem22.domain.utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+
 import org.json.JSONObject;
 import org.json.JSONTokener;
+ 
 
 
 public class DomainSystemConfig {
@@ -48,7 +50,6 @@ public class DomainSystemConfig {
 	        DLIMIT           = object.getInt("DLIMIT");	
 	        tracing          = object.getBoolean("tracing");
 	        testing          = object.getBoolean("testing");
-	        ledGui           = object.getBoolean("ledGui");
 	        
  	        
 		} catch (FileNotFoundException e) {
